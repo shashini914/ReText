@@ -1,0 +1,132 @@
+/* NAVBAR */
+.navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    color: #2c2c2c;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    line-height: 1.5;
+}
+
+nav a.active {
+    color: #f3b15a;
+    font-weight: bold;
+}
+
+nav a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f3b15a;
+    margin-top: 3px;
+    border-radius: 4px;
+}
+
+.navbar nav a:hover {
+    color: #3b3a38;
+}
+
+/* Base page style */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fefdf9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 30px;
+    color: #2c2c2c;
+}
+
+/* Form elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fafafa;
+}
+
+input:focus {
+    outline: none;
+    border-color: #f3b15a;
+}
+
+/* Button style */
+button {
+    padding: 12px;
+    background-color: #f3b15a;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e59c33;
+}
+
+/* Links */
+p {
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: #f3b15a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

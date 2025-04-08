@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | ReText</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='account.css') }}">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">ReText</div>
+        <nav>
+            <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+            <a href="/login" class="{% if request.path == '/login' %}active{% endif %}">Login</a>
+            <a href="/signup" class="{% if request.path == '/signup' %}active{% endif %}">Signup</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Login</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul style="color: red;">
+            {% for msg in messages %}
+            <li>{{ msg }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <form action="/login" method="POST">
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" required><br><br>
+
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don’t have an account? <a href="/signup">Sign up</a></p>
+    </div>
+</body>
+
+</html>

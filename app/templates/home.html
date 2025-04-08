@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Secondhand Book Exchange</title>
+    <meta charset="UTF-8">
+    <title>ReText | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
-    <h1>Welcome to Secondhand Book Exchange</h1>
-    <a href="{{ url_for('main.login') }}">Login</a> | 
-    <a href="{{ url_for('main.signup') }}">Signup</a>
+    <header class="navbar">
+        <div class="logo">ReText</div>
+        <nav>
+            <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+            <a href="/login" class="{% if request.path == '/login' %}active{% endif %}">Login</a>
+            <a href="/signup" class="{% if request.path == '/signup' %}active{% endif %}">Signup</a>
+        </nav>
+
+    </header>
+
+    <main class="main-content">
+        {% if user %}
+        {% set username = user.split('@')[0] %}
+        <p class="welcome">Welcome, {{ username }}!</p>
+        {% endif %}
+
+        <section class="hero">
+            <h1>Buy & Sell Used Textbooks With Ease</h1>
+            <p>Save money. Help the planet. Trade with trusted students at your own college.</p>
+        </section>
+
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Find your next textbook">
+                <div class="slide-text">Buy & Sell Used Textbooks with ReText</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Save money, study smart">
+                <div class="slide-text">Verified Campus Listings Only</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Share with classmates">
+                <div class="slide-text">Search by Course Code or Title</div>
+            </div>
+        </div>
+
+
+        <h2>
+            Recently Listed Books{% if session.college %} in {{ session.college.title() }}{% endif %}
+        </h2>
+
+        <form method="GET" action="/" class="search-form">
+            <input type="text" name="q" placeholder="Search by title or course code..."
+                value="{{ request.args.get('q', '') }}">
+            <button type="submit">Search</button>
+        </form>
+
+        <div class="book-grid">
+            <!-- Dummy book cards -->
+            <div class="book-grid">
+                {% for book in books %}
+                <div class="book-card">
+                    <img src="https://parallel.cymru/wp-content/uploads/Generic-Book-Placeholder-icon-480x480.png"
+                        alt="Book cover">
+                    <h3>{{ book.title }}</h3>
+                    <p>Course: {{ book.course }}</p>
+                    <p>Price: ${{ book.price }}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 ReText. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slider .slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 4000);
+    </script>
+
+
+
 </body>
+
 </html>
