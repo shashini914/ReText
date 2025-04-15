@@ -10,7 +10,7 @@ function BookGrid() {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
-  const maxDisplay = 7;
+  const maxDisplay = 8;
   let college = null;
 
   const token = localStorage.getItem("token");
