@@ -1,0 +1,43 @@
+.seller-profile-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.seller-profile-card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.seller-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.seller-link:hover {
+    text-decoration: underline;
+}
+
+.ratings-section {
+    margin-top: 30px;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.rating-card {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.rating-card .comment {
+    font-style: italic;
+    color: #444;
+    margin-top: 5px;
+}

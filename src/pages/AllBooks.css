@@ -1,0 +1,213 @@
+.book-grid-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.book-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: scale(1.03);
+}
+
+.book-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.sold-badge {
+    background-color: crimson;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 4px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    max-width: 850px;
+    width: 95%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.modal-carousel {
+    flex: 1;
+    max-width: 300px;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-controls button {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 6px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-info {
+    flex: 2;
+    min-width: 250px;
+}
+
+.rate-seller-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rate-seller-btn:hover {
+    background-color: #0056b3;
+}
+
+.rating-modal {
+    margin-top: 12px;
+}
+
+.book-status-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.rating-modal input,
+.rating-modal textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+    font-size: 26px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.star-rating span {
+    transition: color 0.2s ease;
+}
+
+.star-rating .filled {
+    color: gold;
+}
+
+.star-rating .empty {
+    color: #ccc;
+}

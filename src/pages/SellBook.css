@@ -1,0 +1,78 @@
+.sell-page {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fffdfb;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.sell-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #444;
+    font-size: 28px;
+}
+
+.sell-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.sell-form input[type="text"],
+.sell-form input[type="number"],
+.sell-form input[type="email"],
+.sell-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    font-size: 14px;
+}
+
+.sell-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.image-preview {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #eee;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+.sell-form button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #f5a623;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sell-form button:hover {
+    background-color: #e5921d;
+}

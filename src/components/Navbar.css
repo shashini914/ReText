@@ -1,0 +1,135 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-logo a {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    letter-spacing: -1px;
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    gap: 32px;
+}
+
+.navbar-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.navbar-center a:hover {
+    color: #f3b15a;
+}
+
+.search-icon {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.2);
+    color: #f3b15a;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    height: 100%;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px;
+    border: 1px solid transparent;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: 0.3s ease all;
+}
+
+.navbar-right a:hover {
+    border-color: #f3b15a;
+    color: #f3b15a;
+}
+
+.navbar-search-form {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: #e8e6e6;
+    border-radius: 40px;
+    padding: 6px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    animation: fadeIn 0.2s ease-in;
+}
+
+.navbar-search-form input {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 15px;
+    width: 260px;
+    outline: none;
+    color: #333;
+}
+
+.navbar-search-form button {
+    background: none;
+    border: none;
+    color: #918e86;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.profile-icon {
+    color: #010101;
+    border-radius: 50%;
+    padding: 4px;
+    transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+    background-color: #f3b15a;
+    color: white;
+}

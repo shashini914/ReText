@@ -1,0 +1,273 @@
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.book-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card h3 {
+    font-size: 1.1rem;
+    margin: 0.6rem 0 0.4rem;
+}
+
+.book-card p {
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+    color: #333;
+}
+
+.book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.sold-badge {
+    background-color: crimson;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+
+.book-grid-banner {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 1rem 0.5rem;
+    padding: 0.75rem;
+    border-left: 4px solid #ff4081;
+    background-color: #fdf2f8;
+    color: #333;
+}
+
+.section-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+    overflow-x: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 70vh;
+    padding-right: 10px;
+}
+
+.modal-carousel {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-controls button {
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-info {
+    flex: 2;
+    min-width: 250px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.close-icon:hover {
+    color: #ff3366;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.view-more-link {
+    color: #5e0d28;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.view-more-link:hover {
+    text-decoration: underline;
+}
+
+.book-status-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.rate-seller-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rate-seller-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.rating-modal {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.rating-modal h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.rating-modal input,
+.rating-modal textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+
+.rating-modal button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rating-modal button:hover {
+    background-color: #218838;
+}
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+    font-size: 26px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.star-rating span {
+    transition: color 0.2s ease;
+}
+
+.star-rating .filled {
+    color: gold;
+}
+
+.star-rating .empty {
+    color: #ccc;
+}
